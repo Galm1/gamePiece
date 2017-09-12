@@ -13,6 +13,13 @@ public class gamePiece {
         this.positionX = 0;
         this.frozen = false;
     }
+    public int getPositionX(){
+        return positionX;
+    }
+
+    public int getPositionY(){
+        return positionY;
+    }
 
     public String getName(String name) {
         return name;
@@ -32,28 +39,29 @@ public class gamePiece {
 
     public String position(int positionX, int positionY){
 
-        String position = "("+positionX+", "+positionY+")";
+        String position = "(" + positionX + ", " + positionY + ")";
         return position;
 
     }
 
 
-    public int move(){
+    public void move(int newPositionX, int newPositionY){
 
-        positionY newPositionY = new positionY();
-        positionX newPositionX = new positionX();
+        do {
+            positionX = newPositionX;
+            positionY = newPositionY;
+        } while (frozen = false);
+    }
 
+    public void freeze(){
+
+        this.frozen = true;
 
     }
 
-    public boolean freeze(){
+    public void unFreeze(){
 
-        frozen freezePiece = new frozen(false);
-    }
-
-    public boolean unFreeze(){
-
-        frozen unfreezePiece = new frozen(true);
+        this.frozen = false;
     }
 
 }
