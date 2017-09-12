@@ -18,6 +18,8 @@ public class Main {
         pond.unFreeze();
         pond.move(13,7);
         System.out.println(pond.position());
+        pond.ranMove();
+        System.out.println(pond.position());
 
     }
 }

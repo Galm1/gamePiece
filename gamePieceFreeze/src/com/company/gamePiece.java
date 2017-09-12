@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Random;
+
 public class gamePiece {
 
     int positionY;
@@ -56,6 +58,17 @@ public class gamePiece {
     public void move(int newPositionX, int newPositionY){
 
         if(frozen == false) {
+            positionX = newPositionX;
+            positionY = newPositionY;
+        }
+    }
+
+    public void ranMove(){
+
+        Random r = new Random();
+        if(frozen == false) {
+            int newPositionX = r.nextInt(100);
+            int newPositionY = r.nextInt(100);
             positionX = newPositionX;
             positionY = newPositionY;
         }
