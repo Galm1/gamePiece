@@ -69,6 +69,7 @@ public class gamePiece {
 
     public void unFreeze(){
 
+        
         this.frozen = false;
     }
 
