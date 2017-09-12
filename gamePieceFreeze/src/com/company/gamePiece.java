@@ -17,17 +17,17 @@ public class gamePiece {
         this.color = color;
     }
 
-    public boolean isFrozen() {
-        return frozen;
-    }
-
-    public int getPositionX(){
-        return positionX;
-    }
-
-    public int getPositionY(){
-        return positionY;
-    }
+//    public boolean isFrozen() {
+//        return frozen;
+//    }
+//
+//    public int getPositionX(){
+//        return positionX;
+//    }
+//
+//    public int getPositionY(){
+//        return positionY;
+//    }
 
     public String getName(String name) {
         return name;
@@ -45,7 +45,7 @@ public class gamePiece {
         this.color = color;
     }
 
-    public String position(int positionX, int positionY){
+    public String position(){
 
         String position = "(" + positionX + ", " + positionY + ")";
         return position;
@@ -55,10 +55,10 @@ public class gamePiece {
 
     public void move(int newPositionX, int newPositionY){
 
-        do {
+        if(frozen == false) {
             positionX = newPositionX;
             positionY = newPositionY;
-        } while (frozen = false);
+        }
     }
 
     public void freeze(){
@@ -69,7 +69,7 @@ public class gamePiece {
 
     public void unFreeze(){
 
-        
+
         this.frozen = false;
     }
 
