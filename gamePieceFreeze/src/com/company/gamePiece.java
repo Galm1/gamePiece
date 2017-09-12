@@ -12,7 +12,15 @@ public class gamePiece {
         this.positionY = 0;
         this.positionX = 0;
         this.frozen = false;
+
+        this.name = name;
+        this.color = color;
     }
+
+    public boolean isFrozen() {
+        return frozen;
+    }
+
     public int getPositionX(){
         return positionX;
     }
